@@ -8,10 +8,15 @@ describe Guitar do
     guitars.count.is_a?(Integer)
   end
 
-  it 'allows creation of new guitars with no params' do
-    current_guitar_count = Guitar.all.count
-    Guitar.create()
-    new_guitar_count = Guitar.all.count
-    new_guitar_count.should == current_guitar_count
-  end
+  # it 'allows creation of new guitars with no params' do
+  #   current_guitar_count = Guitar.all.count
+  #   Guitar.create()
+  #   new_guitar_count = Guitar.all.count
+  #   new_guitar_count.should == current_guitar_count
+  # end
+
+#Validation should pass
+  Guitar.create(model: "Telecaster").valid?.should == true
+
+
 end
