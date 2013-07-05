@@ -9,6 +9,7 @@ set :database, {adapter: 'postgresql',
                 database: 'guitar_development_new',
                 host: 'localhost'}
 
+
+#Guitar Model
 class Guitar < ActiveRecord::Base
 end
-
