@@ -15,8 +15,9 @@ describe Guitar do
   #   new_guitar_count.should == current_guitar_count
   # end
 
-#Validation should pass
-  Guitar.create(model: "Telecaster").valid?.should == true
-
+#Validation should pass because model exists- "telecaster"
+  it 'requires a model to create a guitar' do
+    Guitar.create(model: "Telecaster").valid?. should == true
+  end
 
 end
