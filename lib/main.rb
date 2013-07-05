@@ -12,4 +12,6 @@ set :database, {adapter: 'postgresql',
 
 #Guitar Model
 class Guitar < ActiveRecord::Base
+  validates :model, :presence => true
+  #year, make, model, color
 end
